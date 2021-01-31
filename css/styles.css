@@ -1,0 +1,404 @@
+/* ############################################################## */
+/* Allgemeines */
+/* ############################################################## */
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 100px;
+    /* margin: 450px 0 0 0; */
+    text-transform: uppercase;
+    color: #fff;
+    /* padding: 0px 50px; */
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0px 50px;
+    margin: 100px auto 0 auto;
+    font-size: 55px;
+}
+
+
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+    font-size: 35px;
+}
+
+.h2_line {
+    margin: 10px auto 10px auto;
+    height: 5px;
+    width: 80px;
+}
+
+.button {
+    text-transform: uppercase;
+    padding: 10px 50px 10px 50px;
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    border: 2px solid #fff;
+}
+
+.button:hover {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ############################################################## */
+/* Zusammengefasste Klassen */
+/* ############################################################## */
+
+footer, header, #startpage .h2_line, #contact .h2_line {
+    background: #fff;
+}
+
+.page {
+    background: #444444;
+}
+
+#contact h2, #startpage p, #startpage .button, .contact li, .contact li a, .herotext, #business h3 {
+    color: #fff;
+}
+
+p, a, header nav ul li a, header nav ul li, header .contact_icon, footer, footer a, .button, span {
+    font-size: 15px;
+    line-height: 25px;
+    word-spacing: 2px;
+}
+
+p, a, header nav ul li a, header nav ul li, header .contact_icon, footer, footer a, .button {
+    color: #999;
+}
+
+#aboutus h2, #business h2, header nav ul li:hover, header .contact_icon:hover, #startpage .button:hover {
+    color: #111;
+}
+
+#aboutus .h2_line, #business .h2_line {
+    background: #111;
+}
+
+/* scrolling Effekt..... */
+header, header #logo, header #logo img, header nav ul li, header nav ul li a, .contact_icon, header nav ul li span {
+    transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+
+/* ############################################################## */
+/* Umfassende Objekte und Klassen */
+/* ############################################################## */
+
+.page {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    padding-top: 50px;    
+}
+
+.menue_active {
+    color: red;
+}
+
+/* ############################################################## */
+/* Header */
+/* ############################################################## */
+
+header {
+    position: fixed;
+    width: 100%; 
+    height: 50px;
+    top: 0;
+	left: 0;
+	right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo img {
+    width: auto;
+    height: 25px;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    /* padding: 0 10px 0 10px; */
+}
+
+.contact_icon {
+    cursor: pointer;
+}
+
+
+/* ################ */
+
+header:hover {
+    height: 100px;
+}
+
+header:hover > #logo img {
+    height: 40px;
+}
+
+header:hover > nav ul li {
+    margin: 0 15px 0 15px;
+}
+
+header:hover > nav ul li a, header:hover > nav ul li span {
+    font-size: 20px;
+}
+
+nav ul li a:hover, nav ul li span:hover {
+    color: #111;
+}
+
+/* ############################################################## */
+/* Startseite */
+/* ############################################################## */
+
+#startpage {
+    background: url(../images/background.jpg);
+    position: relative;
+    background-position: center center;  /* HG Bild ist immer im Mittelpunkt zentriert */
+    background-size: cover;
+    background-attachment: fixed;  /* HG Bild bleibt fest stehen beim scrollen */
+    display: flex;
+}
+
+#startpage p {
+    margin: 0 0 20px 0;
+    max-width: 30vw;
+}
+
+#startpage .h2_line {
+    margin: 0 0 20px 0;
+}
+
+.startpage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 0 0 50px;
+}
+
+
+/* ############################################################## */
+/* Über uns */
+/* ############################################################## */
+
+#aboutus {
+    background-color: #fff;
+}
+
+#aboutus .herotext_background {
+    background-image: url(../images/about.jpg);    
+    margin: 0 50px 0 50px;
+    background-position: center center;
+    /* height: 60vh; */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutus.col-6 {
+    margin: 50px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.herotext {
+    text-transform: uppercase;   
+    font-size: 55px;
+    text-align: center;
+    line-height: 1;
+    margin: 0 100px 0 100px;
+}
+
+
+/* ############################################################## */
+/* Leistungen */
+/* ############################################################## */
+
+#business {
+    background-color: #fff;
+}
+
+#business .craft {
+    background-image: url(../images/craft.jpg);
+}
+
+#business .project {
+    background-image: url(../images/project.jpg);
+}
+
+#business .design {
+    background-image: url(../images/design.jpg);
+}
+
+.craft, .project, .design {
+    margin: 20px 50px 20px 50px;
+    background-position: center center;
+    /* height: 60vh; */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#business .business .h2_line {
+    background: #fff;
+    margin: 0;
+}
+
+#business .business p {
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+
+/* ############################################################## */
+/* Kontakt */
+/* ############################################################## */
+
+#contact {
+    background: url(../images/contact.jpg);
+    position: relative;
+    background-position: center center;  /* HG Bild ist immer im Mittelpunkt zentriert */
+    background-size: cover;
+    background-attachment: fixed;  /* HG Bild bleibt fest stehen beim scrollen */
+    margin-top: 50px;
+}
+
+.contact ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact li {
+    list-style: none;
+}
+
+.contact li a {
+    text-decoration: underline;
+}
+
+.contact [ class *= "fa-"]:before {
+    margin-right: 10px;
+}
+
+
+/* ############################################################## */
+/* Footer */
+/* ############################################################## */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meta_nav {
+    margin: 20px 0 0 0;
+}
+
+#contact footer .logo {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 0 auto; 
+}
+
+#contact footer .logo img {
+    width: 130px;
+    height: auto;
+}
+
+#copyright, #meta_nav ul {
+    padding: 0px 30px;
+}
+
+#copyright {
+    margin: -10px 0 0 0; 
+    padding: 0;
+}
+
+/* MOBILE
+
+TODO: 
+Header
+- Menü als Burger
+- keine Animation
+
+--> Einstz von Flexbox prüfen bei Bild- und Schriftgrößen.
+--> mediaquery vs js
+
+*/
+
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #startpage p {
+        max-width: 70vw;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+}

@@ -1,0 +1,81 @@
+.container {
+    max-width: 1240px;   /* damit Content auf 1180px, aber nur maximal*/
+    width: 100%;         /* damit responsive */
+    margin: 0 auto;      /* Inhalt ist in der Mitte */
+}
+
+.row {                    /* ist für Abstand oben und unten zuständig*/
+    padding: 20px 0;
+    display: flex;        /* damit alle Inhalte nebeneinander sind */
+}
+
+[class *= 'col-'] {         /* alles, was 'col-' enthält */
+    padding: 0 50px;
+}
+
+.col-1 {                    
+    width: calc(100% / 12);
+} 
+
+.col-2 {                    /* 2/12 = 1/6 */
+    width: calc(100% / 6);
+} 
+
+.col-3 {                    /* 3/12 = 1/4 */
+    width: calc(100% / 4);
+} 
+
+.col-4 {                   /* 4/12 = 1/3 */
+    width: calc(100% / 3);
+} 
+
+.col-5 {                   /* 5/12 */
+    width: calc(100% / 12 * 5);
+} 
+
+.col-6 {                   /* 6/12 = 50% */
+    width: 50%;
+} 
+
+.col-7 {                   /* 7/12 */
+    width: calc(100% / 12 * 7);
+} 
+
+.col-8 {                   /* 8/12 = 2/3 */
+    width: calc(100% / 3 * 2);
+} 
+
+.col-9 {                   
+    width: calc(100% / 4 * 3);
+} 
+
+.col-10 {                   
+    width: calc(100% / 12 * 10);
+} 
+
+.col-11 {                   
+    width: calc(100% / 12 * 11);
+} 
+
+.col-12 {                   
+    width: 100%;
+} 
+
+
+
+@media screen and (max-width:  768px) {  /* kleiner als 768 px MOBILE*/
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    [class *= 'col-'] {         /* alles, was 'col-' enthält */
+        width: 100%
+    }
+
+}
+
+
+@media screen and (max-width:  988px) {   /* kleiner als 988 px TABLET */
+
+} 
