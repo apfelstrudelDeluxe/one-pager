@@ -161,27 +161,67 @@ nav li {
 }
 
 
-/* ################ */
+/* Hover-Effekt */
+/* ############################################################## */
 
-header:hover {
-    height: 100px;
+@media only screen and (min-width: 992px) {
+    header:hover {
+        height: 100px;
+    }
+    
+    header:hover > #logo img {
+        height: 40px;
+    }
+    
+    header:hover > nav ul li {
+        margin: 0 15px 0 15px;
+    }
+    
+    header:hover > nav ul li a, header:hover > nav ul li span {
+        font-size: 20px;
+    }
+    
+    nav ul li a:hover, nav ul li span:hover {
+        color: #111;
+    }
+    
 }
 
-header:hover > #logo img {
-    height: 40px;
+
+/* Responsive Menü */
+/* ############################################################## */
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: calc(100vh - 100px);
+        width: 100vw;
+        background-color: cadetblue;
+        position: absolute;
+        top: 100px;  /* Ist die Höhe des Headers. */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -100vw;
+        transition: right 500ms;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #burgerMenu {
+        display: table;
+    }
+
 }
 
-header:hover > nav ul li {
-    margin: 0 15px 0 15px;
-}
 
-header:hover > nav ul li a, header:hover > nav ul li span {
-    font-size: 20px;
-}
 
-nav ul li a:hover, nav ul li span:hover {
-    color: #111;
-}
 
 /* ############################################################## */
 /* Startseite */
@@ -247,6 +287,12 @@ nav ul li a:hover, nav ul li span:hover {
     flex-direction: column;
 }
 
+.specialp::first-letter{
+    font-size: 55px;
+    color: #111;
+    margin-right: 5px;
+}
+
 .herotext {
     text-transform: uppercase;   
     font-size: 55px;
@@ -297,6 +343,86 @@ nav ul li a:hover, nav ul li span:hover {
     color: #fff;
     margin-bottom: 50px;
 }
+
+
+/* ############################################################## */
+/* Beispiele */
+/* ############################################################## */
+
+#examples {
+    background-color: #fff;
+}
+
+.examples {
+    align-items: center;
+}
+
+.examples .col-6 {
+    margin: 20px 50px 20px 50px;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: auto auto;
+}
+
+.grid-container > img {
+    cursor: pointer;
+    max-width: 100%;
+    margin: 0px;
+}
+
+.grid-container > img:hover {
+    opacity: 0.5;
+}
+
+
+/* Lightbox-Styling */
+/* ############################################################## */
+
+#lightbox-overlay {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.9);
+    display: none;
+}
+
+#lightbox-overlay #lightbox-content {
+    width: 80%;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    right: 10%;
+}
+
+#lightbox-overlay #lightbox-content img {
+    width: 100%;
+    height: auto;
+}
+
+#lightbox-overlay #lightbox-content #lightbox_nav {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#lightbox-overlay #lightbox-content #lightbox_nav span {
+    cursor: pointer;
+}
+
+
 
 
 
@@ -399,6 +525,10 @@ Header
 
     h3 {
         font-size: 35px;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
     }
 
 }
