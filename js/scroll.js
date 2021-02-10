@@ -64,7 +64,7 @@ $(document).ready(function() {
             FIXME:
             // Menü-Elemente und richtige Abschnitte zusammenfinden &  IDs ansprechen
             // Ergebnis z.B. #business
-            var LINK = $(MENUE_ELEMENTS[i].attr('href'));
+            var LINK = $(MENUE_ELEMENTS[i]).attr('href');
             console.log(LINK);
             console.log(MENUE_ELEMENTS[i]);
 
